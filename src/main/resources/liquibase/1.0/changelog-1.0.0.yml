@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create orders table
+      author: Mahmud
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: order_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: orders_value
+                  type: varchar(100)
+                  constraints:
+                    nullable: false

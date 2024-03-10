@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: mysecretpass
+    url: jdbc:postgresql://localhost:5432/postgres
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yml
+
+server:
+  port: 8090
